@@ -12,12 +12,12 @@ public class SimpleEchoClient {
     public static void main(String[] args) {
         System.out.println("에코 클라이언트 시작됨");
         try {
-            InetAddress localAddr = InetAddress.getLocalHost();  // 127.0.0.1
+            InetAddress localAddr = InetAddress.getLocalHost();  //"165.246.115.165"
             Socket clientSocket = null;
             PrintWriter pw = null;
             BufferedReader br = null;
             try{
-                clientSocket = new Socket("165.246.115.165", 20000);
+                clientSocket = new Socket(localAddr, 20000);
                 pw = new PrintWriter(clientSocket.getOutputStream(), true);
                 br = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
