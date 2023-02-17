@@ -10,8 +10,9 @@ public class day24_challenge_server {
         System.out.println("서버 시작 중...");
         try (ServerSocket socket = new ServerSocket(9000);
              Socket connetor = socket.accept();
-             PrintWriter out = new PrintWriter(connetor.getOutputStream(), true);)
-        {out.println("서버 > " + new Date());
+             PrintWriter out = new PrintWriter(connetor.getOutputStream(), true);
+             ) {
+            out.println("서버 > " + new Date());
             } catch (Exception e) {
             System.out.println("잘못된 접근입니다.");
             }

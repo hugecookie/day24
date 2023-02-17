@@ -25,9 +25,7 @@ public class Day22 {
                     System.out.println("전송됨: " + dattimemes);
                 }
             }
-        }catch (IOException ex) {
-            System.out.println("입출력예외");
-    }
-
+        }catch (IOException ex)
+        {System.out.println("입출력예외");}
 }
 }
